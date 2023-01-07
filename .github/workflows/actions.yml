@@ -14,4 +14,4 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
         with:
-          args: '{\"channel\":\"D04JLN0UE2C\", \"text\":\"Hello world from Roshan\",}'
+          args: '{\"channel\":\"D04JLN0UE2C\", \"text\":\"Hello world from Roshan\"}'
