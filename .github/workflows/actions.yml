@@ -1,0 +1,17 @@
+name: Announce the release of new version on Slack
+run-name: ${{ github.actor }} has published new release for the library 🚀
+on:
+  push:
+    branches: [main]
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Slack Notification
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+        with:
+          args: '{\"channel\":\"D04JLN0UE2C\", \"text\":\"Hello world from Roshan\",}'
